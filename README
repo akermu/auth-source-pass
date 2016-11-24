@@ -1,0 +1,18 @@
+* auth-source-pass --- Connect auth-source and pass
+
+** Installation:
+
+   Put auth-source-pass.el in your `load-path' and require and enable it:
+
+   (require 'auth-source-pass)
+   (auth-source-pass-enable)
+
+** Usage:
+
+   This requires a metadata file in the password-store named ".metadata.gpg".
+   Lines beginning with a # are ignored. The content of the files are structured
+   as followed:
+
+   # url user pass
+   example.org username pathOfPassword
+   example.net username2 pathOfPassword
