@@ -52,6 +52,8 @@
                                 &allow-other-keys)
   "Given a property list SPEC, return search matches from the :backend.
 See `auth-source-search' for details on SPEC."
+  (unless auth-source-pass-cache
+    (auth-source-pass-load-metadata))
   (when (listp host)
     (setq host (car host)))
   (when-let ((item (car (cl-remove-if-not (lambda (elem)
@@ -87,7 +89,6 @@ See `auth-source-search' for details on SPEC."
 ;;;###autoload
 (defun auth-source-pass-enable ()
   (interactive)
-  (auth-source-pass-load-metadata)
   (add-to-list 'auth-sources 'auth-source-pass))
 
 
