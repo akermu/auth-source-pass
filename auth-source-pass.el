@@ -3,7 +3,7 @@
 ;; Copyright (C) 2016 by Lukas Fürmetz
 ;; URL: http://github.com/akermu/auth-source-pass
 ;; Package-Requires: ((cl-lib "0.5"))
-;; Version: 0.1
+;; Version: 0.2
 ;; Keywords: auth-source pass
 
 ;; auth-source-pass is free software: you can redistribute it and/or modify it
